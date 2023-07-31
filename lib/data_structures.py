@@ -83,8 +83,19 @@ def print_spiciest_foods(spicy_foods):
 print(print_spiciest_foods(spicy_foods))
 
 
+# TASK-6: RETURNS A INTEGER representing the average heat level of spicy foods.
 def get_average_heat_level(spicy_foods):
-    pass
+    # store the sum of the heat levels
+    average_heat_level = 0
+    for food in spicy_foods:
+        average_heat_level += food["heat_level"]
+    calculate_average_heat_level = average_heat_level / len(spicy_foods)
+    return int(calculate_average_heat_level)
+    # return calculate_average_heat_level
+    # this gives floating number => 6.0 test passes like that HOWEVER it's better to convert it to integer => 6
+
+
+print(get_average_heat_level(spicy_foods))
 
 
 def create_spicy_food(spicy_foods, spicy_food):
