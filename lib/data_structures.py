@@ -16,23 +16,40 @@ spicy_foods = [
     },
 ]
 
+
 def get_names(spicy_foods):
-    pass
+    food_names = []   # Create an empty list to store the names
+    for food in spicy_foods:
+        food_name = food["name"]
+        food_names.append(food_name)  # Add the name to the list
+    return food_names
+
+
+names_of_spicy_food = get_names(spicy_foods)
+print(names_of_spicy_food)
+
+# output => ['Green Curry', 'Buffalo Wings', 'Mapo Tofu']
+
 
 def get_spiciest_foods(spicy_foods):
     pass
 
+
 def print_spicy_foods(spicy_foods):
     pass
+
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine):
     pass
 
+
 def print_spiciest_foods(spicy_foods):
     pass
 
+
 def get_average_heat_level(spicy_foods):
     pass
+
 
 def create_spicy_food(spicy_foods, spicy_food):
     pass
