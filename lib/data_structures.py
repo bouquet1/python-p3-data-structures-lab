@@ -98,5 +98,28 @@ def get_average_heat_level(spicy_foods):
 print(get_average_heat_level(spicy_foods))
 
 
+# TASK-7: returns the original list with the new spicy_food added.
+# hardcoding the new spicy_food
 def create_spicy_food(spicy_foods, spicy_food):
-    pass
+    spicy_food = {
+        'name': 'Griot',
+        'cuisine': 'Haitian',
+        'heat_level': 10,
+    }
+    spicy_foods.append(spicy_food)
+    return spicy_foods
+
+
+# more flexible and resuable like in the example here
+def create_spicy_food2(spicy_foods, name, cuisine, heat_level):
+    spicy_food = {
+        'name': name,
+        'cuisine': cuisine,
+        'heat_level': heat_level,
+    }
+    spicy_foods.append(spicy_food)
+    return spicy_foods
+
+
+print(create_spicy_food2(spicy_foods, 'Griot', 'Haitian', 10))
+# output => [{'name': 'Green Curry', 'cuisine': 'Thai', 'heat_level': 9}, {'name': 'Buffalo Wings', 'cuisine': 'American', 'heat_level': 3}, {'name': 'Mapo Tofu', 'cuisine': 'Sichuan', 'heat_level': 6}, {'name': 'Griot', 'cuisine': 'Haitian', 'heat_level': 10}]
